@@ -1,0 +1,37 @@
+body {
+    background: #bbbbbb;
+    color: #000;
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+nav {
+    padding: 3vw;
+}
+
+main {
+    padding: 3vw;
+    text-align: center;
+}
+
+main p {
+    padding-bottom: 4vw;
+}
+
+button {
+    width: 250px;
+    height: 60px;
+    font-size: 24px;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.hide {
+}
