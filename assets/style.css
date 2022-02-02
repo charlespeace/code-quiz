@@ -6,47 +6,84 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-nav {
+.header {
     padding: 3vw;
     text-align: center;
+    font-size: 15px;
 }
 
-span {
-    font-weight: bold;
-}
-
-.container {
-    padding: 5vw;
-    text-align: center;
-}
-
-.container p {
-    padding-bottom: 50px;
+.quiz-container {
+    padding: 5% 20%;
 }
 
 .left {
     float: left;
     text-decoration: none;
-    font-weight: bold;
-    color: rgb(62, 63, 133)
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(62, 63, 133);
+    color: #fff;
+    
 }
 
-.right {
+.time {
     float: right;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #fff;
+    color: rgb(62, 63, 133);
 }
 
-.center {
+.score {
     display: inline;
+    font-weight: bold;
 }
 
+#question {
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: rgb(62, 63, 133);
+}
 
-#startbutton {
+.choice-container {
+    display: flex;
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.choice-container:hover {
+    cursor: pointer;
+    color: #fff;
+    background-color: rgb(62, 63, 133);
+}
+
+.choice-prefix {
+padding: 0 20px;
+}
+
+.choice-text {
+padding: 0 5px;
+}
+
+#prompt {
+    padding-bottom: 50px;
+}
+
+#start-button {
     width: 250px;
     height: 60px;
     font-size: 24px;
-    padding: 15px 80px;
+    padding: 25px 100px;
     border-radius: 15px;
     background-color: rgb(62, 63, 133);
     text-decoration: none;
     color: #fff;
+}
+
+#start-page {
+    text-align: center;
+    padding: 5vw;
 }
