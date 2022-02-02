@@ -10,19 +10,23 @@ nav {
     padding: 3vw;
 }
 
-main {
+.container {
     padding: 3vw;
     text-align: center;
 }
 
-main p {
+.container p {
     padding-bottom: 4vw;
 }
 
-button {
+.container a {
     width: 250px;
     height: 60px;
     font-size: 24px;
+    padding: 15px 45px;
+    border-radius: 15px;
+    background-color: #fff;
+    text-decoration: none;
 }
 
 .left {
