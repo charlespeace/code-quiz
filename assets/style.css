@@ -68,6 +68,11 @@ padding: 0 20px;
 padding: 0 5px;
 }
 
+.container h1 {
+    text-align: center;
+    size: 40px;
+}
+
 #prompt {
     padding-bottom: 50px;
 }
