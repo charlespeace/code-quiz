@@ -2,6 +2,10 @@ var choices = Array.from(document.querySelectorAll('.choice-text'))
 var question = document.querySelector('#question')
 var scoreText = document.querySelector('#score')
 var timer = document.querySelector('#timer')
+var startBtn = document.querySelector('#start-button')
+
+var time = 60;
+var timerId;
 
 var currentQuestion = {}
 var acceptingAnswers = false
@@ -52,6 +56,10 @@ function startQuiz () {
     score = 0
     availableQuestions = [...questions]
     console.log(availableQuestions)
+
+    timerId = setInterval(clockTick, 1000);
+    timer.textContent = time;
+
     getNewQuestion();
 }
 
@@ -87,6 +95,13 @@ choices.forEach(choice => {
         if (classToApply === 'correct') {
             incrementScore(CORRECT_BONUS)
         }
+        if (classToApply === 'incorrect') {
+            time -= 15;
+            if (time <= 0) {
+              time <= 0;
+            }
+            timer.textContent = time;
+        }
 
         selectedChoice.parentElement.classList.add(classToApply)
         setTimeout(() => {
@@ -95,6 +110,15 @@ choices.forEach(choice => {
         }, 600)
     })
 })
+
+function clockTick() {
+    time--;
+    timer.textContent = time;
+  
+    if (time <= 0) {
+        return window.location.assign('./results.html')
+    }
+}
 
 incrementScore = num => {
     score += num;

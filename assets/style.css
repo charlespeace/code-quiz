@@ -109,10 +109,9 @@ width: 100%;
 }
 
 .start-button {
-    width: 250px;
+    width: 30%;
     height: 60px;
-    font-size: 24px;
-    padding: 25px 100px;
+    font-size: 20px;
     border-radius: 15px;
     background-color: rgb(62, 63, 133);
     text-decoration: none;
