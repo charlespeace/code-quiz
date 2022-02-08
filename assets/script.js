@@ -1,13 +1,15 @@
 var choices = Array.from(document.querySelectorAll('.choice-text'))
 var question = document.querySelector('#question')
+var scoreText = document.querySelector('#score')
+var timer = document.querySelector('#timer')
 
-let currentQuestion = {}
-let acceptingAnswers = false
-let score = 0
-let questionCounter = 0
-let availableQuestions = []
+var currentQuestion = {}
+var acceptingAnswers = false
+var score = 0
+var questionCounter = 0
+var availableQuestions = []
 
-let questions= [
+var questions= [
     {
         question: 'How many letters are there in the word "Garlic"?',
         choice1: '5',
@@ -45,7 +47,7 @@ let questions= [
 var CORRECT_BONUS = 10
 var MAX_QUESTIONS = 4
 
-startGame = () => {
+startQuiz = () => {
     questionCounter = 0
     score = 0
     availableQuestions = [...questions]
@@ -55,7 +57,7 @@ startGame = () => {
 
 getNewQuestion = () => {
     if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
-        return window.location.assign('./highscore.html')
+        return window.location.assign('./results.html')
     }
     questionCounter++;
     var questionIndex = Math.floor(Math.random() * availableQuestions.length)
@@ -81,6 +83,9 @@ choices.forEach(choice => {
             if (selectedAnswer == currentQuestion.answer) {
             classToApply = 'correct'
             }
+        if (classToApply === 'correct') {
+            incrementScore(CORRECT_BONUS)
+        }
 
         selectedChoice.parentElement.classList.add(classToApply)
         setTimeout(() => {
@@ -89,5 +94,11 @@ choices.forEach(choice => {
         }, 600)
     })
 })
-startGame()
+
+incrementScore = num => {
+    score += num;
+    scoreText.innerText = score;
+}
+
+startQuiz()
 

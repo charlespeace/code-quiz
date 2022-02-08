@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>High Scores</title>
+    <title>Your score:</title>
     <link rel="stylesheet" href="./assets/style.css">
 </head>
 
@@ -12,12 +12,15 @@
     <nav class="header">
         <a href="./index.html" class="left" >New Attempt</a>
         <div class="time">Time Remaining: <span id="timer">0</span></div>
-        <h1 class="score">High Scores</h1>
+        <h1 class="score">Your Score: <span id="finalScore">0</span></h1>
     </nav>
 
     <div class="container">
-            <ol id="highscores"></ol>
+        <form>
+            <input type="text" name="username" id="username" placeholder="username">
+            <button type="submit" class="start-button">Save</button>
+        </form>
     </div>
-    <script src="./assets/highscore.js"></script>
+    <script src="./assets/results.js"></script>
 </body>
 </html>
