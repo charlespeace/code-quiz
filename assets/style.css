@@ -57,8 +57,7 @@ body {
 
 .choice-container:hover {
     cursor: pointer;
-    color: #fff;
-    background-color: rgb(62, 63, 133);
+    color:  blue;
 }
 
 .choice-prefix {
@@ -68,6 +67,14 @@ padding: 0 20px;
 .choice-text {
 padding: 0 5px;
 width: 100%;
+}
+
+.correct {
+    background-color: rgb(175, 255, 195);
+}
+
+.incorrect {
+    background-color: rgb(255, 168, 168);
 }
 
 #prompt {
