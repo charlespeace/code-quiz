@@ -12,13 +12,13 @@
     <nav class="header">
         <a href="./index.html" class="left" >New Attempt</a>
         <div class="time">Time Remaining: <span id="timer">0</span></div>
-        <h1 class="score">Your Score: <span id="finalScore">0</span></h1>
     </nav>
 
-    <div class="container">
+    <div>
         <form>
-            <input type="text" name="username" id="username" placeholder="username">
-            <button type="submit" class="start-button">Save</button>
+            <h1 class="score">Your Score: <span id="finalScore">0</span></h1>
+            <input type="text" name="initials" id="initials" placeholder="Enter Initials">
+            <button type="submit" id="saveScoreBtn" onclick="saveHighScore(event)" disabled>Save</button>
         </form>
     </div>
     <script src="./assets/results.js"></script>

@@ -9,7 +9,7 @@ var score = 0
 var questionCounter = 0
 var availableQuestions = []
 
-var questions= [
+var questions = [
     {
         question: 'How many letters are there in the word "Garlic"?',
         choice1: '5',
@@ -47,7 +47,7 @@ var questions= [
 var CORRECT_BONUS = 10
 var MAX_QUESTIONS = 4
 
-startQuiz = () => {
+function startQuiz () {
     questionCounter = 0
     score = 0
     availableQuestions = [...questions]
@@ -55,8 +55,9 @@ startQuiz = () => {
     getNewQuestion();
 }
 
-getNewQuestion = () => {
+function getNewQuestion () {
     if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
+        localStorage.setItem('recentScore', score)
         return window.location.assign('./results.html')
     }
     questionCounter++;
