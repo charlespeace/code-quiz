@@ -1,5 +1,5 @@
 body {
-    background: #bbbbbb;
+    background: #b4ced6;
     color: #000;
     margin: 0;
     padding: 0;
@@ -47,6 +47,7 @@ button {
     text-decoration: none;
     padding: 10px;
     border-radius: 10px;
+    width: 150px;
     background-color: rgb(62, 63, 133);
     color: #fff;
     
@@ -108,6 +109,13 @@ width: 100%;
     padding-bottom: 50px;
 }
 
+#highScores {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .start-button {
     width: 30%;
     height: 60px;
@@ -118,7 +126,14 @@ width: 100%;
     color: #fff;
 }
 
-#start-page {
+.start-page {
     text-align: center;
     padding: 5vw;
+}
+
+.high-score {
+    list-style: none;
+    text-align: center;
+    font-size: 25px;
+    padding: 10px;
 }

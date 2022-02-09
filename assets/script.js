@@ -96,7 +96,7 @@ choices.forEach(choice => {
             incrementScore(CORRECT_BONUS)
         }
         if (classToApply === 'incorrect') {
-            time -= 15;
+            time -= 20;
             if (time <= 0) {
               time <= 0;
             }
